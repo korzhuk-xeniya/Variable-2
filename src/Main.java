@@ -72,7 +72,12 @@ public class Main {
         byte whiteColorPots = 2;
         byte brownColorPots = 4;
         float potsOnClass = whiteColorPots + brownColorPots;
+        float numberOfClasses = totalPots / potsOnClass;
         float whiteFraction = whiteColorPots / potsOnClass;
+        System.out.println("Доля белых банок - " + whiteFraction);
+        float totalWhitePots = whiteFraction * totalPots;
+        float totalBrownPots = totalPots - totalWhitePots;
+        System.out.println("В школе, где " + numberOfClasses + " классов, нужно " + totalWhitePots + " банок белой краски и " + totalBrownPots + " банок коричневой краски");
 
 
 
