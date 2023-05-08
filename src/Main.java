@@ -72,6 +72,9 @@ public class Main {
         byte whiteColorPots = 2;
         byte brownColorPots = 4;
         int potsOnClass = whiteColorPots + brownColorPots;
+        float whiteFraction = whiteColorPots / potsOnClass;
+
+
 
 
     }
