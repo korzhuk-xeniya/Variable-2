@@ -5,6 +5,9 @@ public class Main {
         task3 ();
         task4 ();
         task5 ();
+        task6 ();
+        task7 ();
+        task8 ();
 
     }
     public static void task1 () {
@@ -72,10 +75,62 @@ public class Main {
         byte whiteColorPots = 2;
         byte brownColorPots = 4;
         float potsOnClass = whiteColorPots + brownColorPots;
+        float numberOfClasses = totalPots / potsOnClass;
         float whiteFraction = whiteColorPots / potsOnClass;
-
-
-
-
+        System.out.println("Доля белых банок - " + whiteFraction);
+        float totalWhitePots = whiteFraction * totalPots;
+        float totalBrownPots = totalPots - totalWhitePots;
+        System.out.println("В школе, где " + numberOfClasses + " классов, нужно " + totalWhitePots + " банок белой краски и " + totalBrownPots + " банок коричневой краски");
     }
+    public static void task6 () {
+        System.out.println("Задача 6");
+        byte numberOfBananas = 5;// в штуках
+        byte bananaWeight = 80;// в граммах
+        short amountOfMilk = 200;// В милилитрах
+        byte weightOf100mlMilk = 105;// масса 100 мл молока в граммах
+        byte numberOfPlombir = 2; // в брикетах
+        byte weightOfPlombir = 100; // масса 1 брикета в гаммах
+        byte numberOfEggs = 4;
+        byte weightOfEgg = 70; // масса 1 яица в граммах
+        int weightOfBreakfast = numberOfBananas * bananaWeight + amountOfMilk / 100 * weightOf100mlMilk + numberOfPlombir * weightOfPlombir + numberOfEggs * weightOfEgg; // масса завтрака в граммах
+        float weightOfBreakfastInKg = weightOfBreakfast * 1f / 1000; // масса завтрака в килограммах
+        System.out.println("Вес спортзавтрак составляет " + weightOfBreakfast + " грамм = " + weightOfBreakfastInKg + " килограмм");
+    }
+    public static void task7 () {
+        System.out.println("Задача 7");
+        byte loseWeightKg = 7; // масса, которую необходимо сбросить в кг
+        int loseWeightG = loseWeightKg * 1000; // масса, которую необходимо сбросить в г
+        short minDayLoseWeight = 250; // минимальная потеря массы в день в г
+        short maxDayLoseWeight = 500; // максимальная потеря массы в день в г
+        int minDays = loseWeightG / minDayLoseWeight; //количество дней при минимальной потере массы
+        System.out.println("Спортсмену потребуется " + minDays + " дней, если он будет терять по " + minDayLoseWeight + " грамм в день");
+        int maxDays = loseWeightG / maxDayLoseWeight; // количество дней при максимальной потере веса
+        System.out.println("Спортсмену потребуется " + maxDays + " дней, если он будет терять по " + maxDayLoseWeight + " грамм в день");
+        int middleDays = (minDays + maxDays) / 2; // среднее количество дней
+        System.out.println("Спортсмену в среднем для похудения может потребоваться " + middleDays + " день");
+    }
+    public static void task8 () {
+        System.out.println("Задача 8");
+        int mashaSalary = 67760; //рублей в месяц
+        int denisSalary = 83690;//рублей в месяц
+        int kristinaSalary = 76230;//рублей в месяц
+        byte n = 12;
+        float k = 0.1F;
+        int previousMashaIncome = mashaSalary * n; // годовой доход Маши до повышения
+        int previousDenisIncome = denisSalary * n;// годовой доход Дениса до повышения
+        int previousKristinaIncome = kristinaSalary * n; // годовой доход Кристины до повышения
+        float newMashaSalary = mashaSalary + mashaSalary * k;
+        float newDenisSalary = denisSalary + denisSalary * k;
+        float newKristinaSalary = kristinaSalary + kristinaSalary * k;
+        float newMashaIncome = newMashaSalary * n; // годовой доход Маши после повышения
+        float newDenisIncome = newDenisSalary * n;// годовой доход Дениса после повышения
+        float newKristinaIncome = newKristinaSalary * n; // годовой доход Кристины после повышения
+        float differenceMashaIncome = newMashaIncome % previousMashaIncome;
+        float differenceDenisIncome = newDenisIncome % previousDenisIncome;
+        float differenceKristinaIncome = newKristinaIncome % previousKristinaIncome;
+        System.out.println("Маша теперь получает " + newMashaSalary + " рублей. Годовой доход вырос на " + differenceMashaIncome + " рублей");
+        System.out.println("Денис теперь получает " + newDenisSalary + " рублей. Годовой доход вырос на " + differenceDenisIncome + " рублей");
+        System.out.println("Кристина теперь получает " + newKristinaSalary + " рублей. Годовой доход вырос на " + differenceKristinaIncome + " рублей");
+    }
+
 }
