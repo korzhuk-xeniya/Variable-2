@@ -125,9 +125,9 @@ public class Main {
         float newMashaIncome = newMashaSalary * n; // годовой доход Маши после повышения
         float newDenisIncome = newDenisSalary * n;// годовой доход Дениса после повышения
         float newKristinaIncome = newKristinaSalary * n; // годовой доход Кристины после повышения
-        float differenceMashaIncome = newMashaIncome - previousMashaIncome;
-        float differenceDenisIncome = newDenisIncome - previousDenisIncome;
-        float differenceKristinaIncome = newKristinaIncome - previousKristinaIncome;
+        float differenceMashaIncome = newMashaIncome % previousMashaIncome;
+        float differenceDenisIncome = newDenisIncome % previousDenisIncome;
+        float differenceKristinaIncome = newKristinaIncome % previousKristinaIncome;
         System.out.println("Маша теперь получает " + newMashaSalary + " рублей. Годовой доход вырос на " + differenceMashaIncome + " рублей");
         System.out.println("Денис теперь получает " + newDenisSalary + " рублей. Годовой доход вырос на " + differenceDenisIncome + " рублей");
         System.out.println("Кристина теперь получает " + newKristinaSalary + " рублей. Годовой доход вырос на " + differenceKristinaIncome + " рублей");
