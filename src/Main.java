@@ -114,18 +114,20 @@ public class Main {
         int mashaSalary = 67760; //рублей в месяц
         int denisSalary = 83690;//рублей в месяц
         int kristinaSalary = 76230;//рублей в месяц
-        int previousMashaIncome = mashaSalary * 12; // годовой доход Маши до повышения
-        int previousDenisIncome = denisSalary * 12;// годовой доход Дениса до повышения
-        int previousKristinaIncome = kristinaSalary * 12; // годовой доход Кристины до повышения
-        double newMashaSalary = mashaSalary + mashaSalary * 0.1;
-        double newDenisSalary = denisSalary + denisSalary * 0.1;
-        double newKristinaSalary = kristinaSalary + kristinaSalary * 0.1;
-        double newMashaIncome = newMashaSalary * 12; // годовой доход Маши после повышения
-        double newDenisIncome = newDenisSalary * 12;// годовой доход Дениса после повышения
-        double newKristinaIncome = newKristinaSalary * 12; // годовой доход Кристины после повышения
-        double differenceMashaIncome = newMashaIncome - previousMashaIncome;
-        double differenceDenisIncome = newDenisIncome - previousDenisIncome;
-        double differenceKristinaIncome = newKristinaIncome - previousKristinaIncome;
+        byte n = 12;
+        float k = 0.1F;
+        int previousMashaIncome = mashaSalary * n; // годовой доход Маши до повышения
+        int previousDenisIncome = denisSalary * n;// годовой доход Дениса до повышения
+        int previousKristinaIncome = kristinaSalary * n; // годовой доход Кристины до повышения
+        float newMashaSalary = mashaSalary + mashaSalary * k;
+        float newDenisSalary = denisSalary + denisSalary * k;
+        float newKristinaSalary = kristinaSalary + kristinaSalary * k;
+        float newMashaIncome = newMashaSalary * n; // годовой доход Маши после повышения
+        float newDenisIncome = newDenisSalary * n;// годовой доход Дениса после повышения
+        float newKristinaIncome = newKristinaSalary * n; // годовой доход Кристины после повышения
+        float differenceMashaIncome = newMashaIncome - previousMashaIncome;
+        float differenceDenisIncome = newDenisIncome - previousDenisIncome;
+        float differenceKristinaIncome = newKristinaIncome - previousKristinaIncome;
         System.out.println("Маша теперь получает " + newMashaSalary + " рублей. Годовой доход вырос на " + differenceMashaIncome + " рублей");
         System.out.println("Денис теперь получает " + newDenisSalary + " рублей. Годовой доход вырос на " + differenceDenisIncome + " рублей");
         System.out.println("Кристина теперь получает " + newKristinaSalary + " рублей. Годовой доход вырос на " + differenceKristinaIncome + " рублей");
